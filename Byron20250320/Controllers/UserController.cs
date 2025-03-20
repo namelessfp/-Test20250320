@@ -59,7 +59,7 @@ namespace Byron20250320.Controllers
         {
             if (ModelState.IsValid)
             {
-                user.PasswordHash = CalcularHashMD5(user.Password);
+             
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
